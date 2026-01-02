@@ -24,37 +24,57 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('admin123'),
         ]);
 
-        $menuImage = Storage::disk('public')->putFile('uploads', new File(public_path('images/steak.jpg')));
-
         Menu::create([
             'admin_id'     => $admin->id,
             'name'         => 'Steak',
             'price'        => 30000,
-            'category'     => 'food',
+            'category'     => 'makanan',
             'is_available' => true,
-            'image'        => $menuImage,
+            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/steak.jpg'))),
         ]);
-
-        $menuImage = Storage::disk('public')->putFile('uploads', new File(public_path('images/hamburger.jpg')));
 
         Menu::create([
             'admin_id'     => $admin->id,
             'name'         => 'Hamburger',
             'price'        => 40000,
-            'category'     => 'food',
+            'category'     => 'makanan',
             'is_available' => true,
-            'image'        => $menuImage,
+            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/hamburger.jpg'))),
         ]);
-
-        $menuImage = Storage::disk('public')->putFile('uploads', new File(public_path('images/pasta.jpg')));
 
         Menu::create([
             'admin_id'     => $admin->id,
             'name'         => 'Pasta',
             'price'        => 25000,
-            'category'     => 'food',
+            'category'     => 'makanan',
             'is_available' => true,
-            'image'        => $menuImage,
+            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/pasta.jpg'))),
+        ]);
+
+        Menu::create([
+            'admin_id'     => $admin->id,
+            'name'         => 'Green Tea',
+            'price'        => 10000,
+            'category'     => 'minuman',
+            'is_available' => false,
+            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/green-tea.jpg'))),
+        ]);
+
+        Menu::create([
+            'admin_id'     => $admin->id,
+            'name'         => 'Chocolate Milk',
+            'price'        => 15000,
+            'category'     => 'minuman',
+            'is_available' => true,
+            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/chocolate-milk.jpg'))),
+        ]);
+
+        Menu::create([
+            'admin_id'     => $admin->id,
+            'name'         => 'Coffee',
+            'price'        => 5000,
+            'is_available' => true,
+            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/coffee.jpg'))),
         ]);
     }
 }
