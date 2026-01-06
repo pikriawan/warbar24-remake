@@ -1,0 +1,9 @@
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.menu-image {
+    object-fit: cover;
+}

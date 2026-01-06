@@ -14,7 +14,12 @@
                             <p>Harga: {{ $menu->price }}</p>
                             <p>Kategori: {{ $menu->category === null ? 'uncategorized' : $menu->category }}</p>
                             <p>{{ $menu->is_available ? 'Tersedia' : 'Habis' }}</p>
-                            <button>Tambah</button>
+                            <form action="/cart" method="post">
+                                @csrf
+                                <input type="hidden" name="menu_id" value="{{ $menu->id }}">
+                                <input type="hidden" name="action" value="increment">
+                                <button>Tambah</button>
+                            </form>
                         </div>
                     @endforeach
                 </div>
