@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('admin_id')->nullable()->constrained();
             $table->foreignId('customer_id')->constrained();
+            $table->string('customer_name')->nullable();
             $table->enum('status', ['pending', 'processing', 'finished', 'canceled'])->nullable();
             $table->timestamps();
         });

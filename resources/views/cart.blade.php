@@ -26,4 +26,17 @@
             <p>Keranjang kosong</p>
         @endforelse
     </div>
+    @if (count($menus) > 0)
+        <div>
+            <h2>Checkout</h2>
+            <form action="/checkout" method="post">
+                @csrf
+                <div>
+                    <label for="customerName">Nama</label>
+                    <input name="customer_name" id="customerName" required>
+                </div>
+                <button>Bayar sekarang: Rp {{ $totalPrice }}</button>
+            </form>
+        </div>
+    @endif
 </x-customer-layout>
