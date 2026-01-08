@@ -1,4 +1,3 @@
 <x-root-layout>
-    <x-header></x-header>
     {{ $slot }}
 </x-root-layout>
