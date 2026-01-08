@@ -48,4 +48,6 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/admin/menu/create', function () {
         return view('admin.menu-create');
     });
+
+    Route::post('/admin/menu/create', [AdminMenuController::class, 'store']);
 });

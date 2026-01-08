@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Menu;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MenuController extends Controller
 {
@@ -25,7 +27,31 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => ['required', 'string'],
+            'image' => ['nullable', 'image', 'mimes:jpeg,jpg,png', 'max:2048'],
+            'price' => ['required', 'numeric'],
+            'category' => ['nullable', 'string'],
+            'is_available' => ['required', 'string', 'in:true,false'],
+        ]);
+
+        $menu = new Menu();
+
+        $menu->admin_id = Auth::guard('admin')->user()->id;
+        $menu->name = $request->string('name');
+
+        if ($request->hasFile('image')) {
+            $fileName = $request->file('image')->store('uploads', 'public');
+            $menu->image = $fileName;
+        }
+
+        $menu->price = $request->float('price');
+        $menu->category = $request->string('category');
+        $menu->is_available = $request->boolean('is_available');
+
+        $menu->save();
+
+        return redirect('/admin/menus');
     }
 
     /**
