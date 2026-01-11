@@ -26,6 +26,33 @@ class DatabaseSeeder extends Seeder
 
         Menu::create([
             'admin_id'     => $admin->id,
+            'name'         => 'Telur Balado',
+            'price'        => 3000,
+            'category'     => 'makanan',
+            'is_available' => true,
+            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/telur-balado.jpg'))),
+        ]);
+
+        Menu::create([
+            'admin_id'     => $admin->id,
+            'name'         => 'Sayur Sop',
+            'price'        => 5000,
+            'category'     => 'makanan',
+            'is_available' => true,
+            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/sayur-sop.jpg'))),
+        ]);
+
+        Menu::create([
+            'admin_id'     => $admin->id,
+            'name'         => 'Tumis Pare',
+            'price'        => 3000,
+            'category'     => 'makanan',
+            'is_available' => true,
+            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/tumis-pare.jpg'))),
+        ]);
+
+        Menu::create([
+            'admin_id'     => $admin->id,
             'name'         => 'Steak',
             'price'        => 30000,
             'category'     => 'makanan',
@@ -73,6 +100,7 @@ class DatabaseSeeder extends Seeder
             'admin_id'     => $admin->id,
             'name'         => 'Coffee',
             'price'        => 5000,
+            'category'     => 'minuman',
             'is_available' => true,
             'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/coffee.jpg'))),
         ]);
