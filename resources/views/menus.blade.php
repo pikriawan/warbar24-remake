@@ -2,7 +2,20 @@
     @push('styles')
         @vite('resources/css/menus.css')
     @endpush
+    <form>
+        @if (request('category'))
+            <input type="hidden" name="category" value="{{ request('category') }}">
+        @endif
+        <input type="search" name="search" value="{{ request('search') }}">
+        <button>Search</button>
+    </form>
     @if (count($data) > 0)
+        <div class="filters">
+            <a href="/menus">Semua</a>
+            @foreach ($categories as $category)
+                <a href="/menus?category={{ $category }}">{{ Str::title($category) }}</a>
+            @endforeach
+        </div>
         <div class="menu-category-list">
             @foreach ($data as $category => $menus)
                 <div>
