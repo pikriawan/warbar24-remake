@@ -389,6 +389,7 @@ class DatabaseSeeder extends Seeder
             'admin_id'     => $admin->id,
             'name'         => 'Es Susu Cokelat',
             'price'        => 5000,
+            'category'     => 'minuman',
             'is_available' => true,
             'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/es-susu-cokelat.jpg'))),
         ]);
