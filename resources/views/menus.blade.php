@@ -11,7 +11,7 @@
             <div class="form-field">
                 <label class="label" for="search">Cari Menu</label>
                 <div class="form-field-row">
-                    <input class="text-field" type="search" name="search" value="{{ request('search') }}" placeholder="{{ $searchPlaceholder === null ? 'Kata kunci' : $searchPlaceholder }}">
+                    <input class="text-field" type="search" name="search" value="{{ request('search') }}" placeholder="{{ $searchPlaceholder === null ? '' : $searchPlaceholder }}">
                     <button class="button button-primary">Cari</button>
                 </div>
             </div>
