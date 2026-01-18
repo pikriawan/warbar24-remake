@@ -21,6 +21,11 @@ class Order extends Model
         return $this->belongsTo(Admin::class);
     }
 
+    public function customer(): BelongsTo
+    {
+        return $this->belongsTo(Customer::class);
+    }
+
     public function menus(): BelongsToMany
     {
         return $this->belongsToMany(Menu::class)->withPivot('menu_quantity');

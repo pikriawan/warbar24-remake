@@ -27,6 +27,8 @@ Route::middleware([EnsureCustomerExists::class, EnsureCustomerHasCart::class])->
     Route::get('/orders', [OrderController::class, 'index']);
 
     Route::get('/order/{order}', [OrderController::class, 'show']);
+
+    Route::put('/order/{order}/cancel', [OrderController::class, 'cancel']);
 });
 
 Route::middleware('guest:admin')->group(function () {
