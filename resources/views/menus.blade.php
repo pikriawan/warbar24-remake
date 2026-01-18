@@ -42,17 +42,17 @@
         </div>
         @if (count($data) > 0)
             @foreach ($data as $category => $menus)
-                <div class="menus-category">
-                    <h2 class="menus-category-title">{{ $category === '' ? 'Lainnya' : Str::title($category) }}</h2>
-                    <div class="menus-category-list">
+                <div class="menu-category">
+                    <h2 class="menu-category-title">{{ $category === '' ? 'Lainnya' : Str::title($category) }}</h2>
+                    <div class="menu-category-list">
                         @foreach ($menus as $menu)
-                            <div class="menus-item">
-                                <div class="menus-item-top">
-                                    <img class="menus-item-image" src="{{ $menu->image === null ? '/images/menu-no-image.png' : asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}">
-                                    <h3 class="menus-item-title">{{ $menu->name }}</h3>
-                                    <p class="menus-item-price">{{ floor($menu->price) == $menu->price ? 'Rp ' . number_format($menu->price, 0, ',', '.') . ',-' : 'Rp ' . number_format($menu->price, 2, ',', '.') }}</p>
+                            <div class="menu-item">
+                                <div class="menu-item-top">
+                                    <img class="menu-item-image" src="{{ $menu->image === null ? '/images/menu-no-image.png' : asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}">
+                                    <h3 class="menu-item-title">{{ $menu->name }}</h3>
+                                    <p class="menu-item-price">{{ floor($menu->price) == $menu->price ? 'Rp ' . number_format($menu->price, 0, ',', '.') . ',-' : 'Rp ' . number_format($menu->price, 2, ',', '.') }}</p>
                                 </div>
-                                <form class="menus-item-add-form" action="/cart" method="post">
+                                <form class="menu-item-add-form" action="/cart" method="post">
                                     @csrf
                                     <input type="hidden" name="menu_id" value="{{ $menu->id }}">
                                     <input type="hidden" name="action" value="increment">
