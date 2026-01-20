@@ -20,13 +20,9 @@ class CartController extends Controller
             ->first();
         $menus = $cart->menus;
 
-        $totalPrice = $menus
-            ->map(function ($menu) {
-                return $menu->price * $menu->pivot->menu_quantity;
-            })
-            ->reduce(function (?float $carry, float $subtotal) {
-                return $carry + $subtotal;
-            });
+        $totalPrice = $menus->reduce(function (?float $carry, $menu) {
+            return $carry + $menu->price * $menu->pivot->menu_quantity;
+        });
         
         return view('cart', [
             'menus' => $menus,
