@@ -17,6 +17,14 @@ class OrderController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
+        $orders = $orders->map(function ($order) {
+            $order->totalPrice = $order->menus->reduce(function (?float $carry, $menu) {
+                return $carry + $menu->price * $menu->pivot->menu_quantity;
+            });
+
+            return $order;
+        });
+
         return view('orders', [
             'orders' => $orders,
         ]);
