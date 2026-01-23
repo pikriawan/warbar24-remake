@@ -1,11 +1,26 @@
 const sidebarShowButton = document.getElementById("sidebarShowButton");
 const sidebarHideButton = document.getElementById("sidebarHideButton");
 const sidebar = document.getElementById("sidebar");
+const sidebarBackdrop = document.getElementById("sidebarBackdrop");
+
+function showSidebar(sidebar, sidebarBackdrop) {
+    sidebar.classList.add("show");
+    sidebarBackdrop.classList.add("show");
+} 
+
+function hideSidebar(sidebar, sidebarBackdrop) {
+    sidebar.classList.remove("show");
+    sidebarBackdrop.classList.remove("show");
+} 
 
 sidebarShowButton.addEventListener("click", () => {
-    sidebar.classList.add("show");
+    showSidebar(sidebar, sidebarBackdrop);
 });
 
 sidebarHideButton.addEventListener("click", () => {
-    sidebar.classList.remove("show");
+    hideSidebar(sidebar, sidebarBackdrop);
+});
+
+sidebarBackdrop.addEventListener("click", () => {
+    hideSidebar(sidebar, sidebarBackdrop);
 });
