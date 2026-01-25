@@ -1,3 +1,43 @@
-.menu-image {
+.menus-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.menus-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 2rem;
+}
+
+.menus-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.menus-table {
+    display: grid;
+    grid-template-columns: repeat(6, 12.5rem);
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    overflow-x: auto;
+}
+
+.table-text-strong {
+    font-weight: 600;
+}
+
+.table-image {
+    aspect-ratio: 1 / 1;
     object-fit: cover;
+    border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+    .menus-title {
+        font-size: 2.5rem;
+    }
 }
