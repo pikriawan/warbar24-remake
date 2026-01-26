@@ -21,7 +21,7 @@
             <input name="name" id="name" required>
         </div>
         <div>
-            <img class="preview" id="preview" src="" alt="" width="128" height="128">
+            <img class="preview" id="preview" src="/images/menu-no-image.png" alt="" width="128" height="128">
             <br>
             <label for="image">Gambar</label>
             <input type="file" name="image" id="image" accept="image/jpeg, image/png">

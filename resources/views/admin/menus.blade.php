@@ -64,7 +64,7 @@
                 @endforeach
             </div>
         @else
-            <p>Tidak ada menu</p>
+            <p class="no-menu">Tidak ada menu</p>
         @endif
     </div>
 </x-admin-layout>
