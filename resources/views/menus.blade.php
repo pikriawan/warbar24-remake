@@ -1,3 +1,12 @@
+@php
+    function formatRupiah($number) {
+        if (floor($number === $number)) {
+            return 'Rp' . number_format($number, 0, ',', '.') . ',-';
+        } else {
+            return 'Rp' . number_format($number, 2, ',', '.');
+        }
+    }
+@endphp
 @push('styles')
     @vite('resources/css/menus.css')
 @endpush
@@ -50,7 +59,7 @@
                                 <div class="menu-item-top">
                                     <img class="menu-item-image" src="{{ $menu->image === null ? '/images/menu-no-image.png' : asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}">
                                     <h3 class="menu-item-title">{{ $menu->name }}</h3>
-                                    <p class="menu-item-price">{{ floor($menu->price) == $menu->price ? 'Rp ' . number_format($menu->price, 0, ',', '.') . ',-' : 'Rp ' . number_format($menu->price, 2, ',', '.') }}</p>
+                                    <p class="menu-item-price">{{ formatRupiah($menu->price) }}</p>
                                 </div>
                                 <form class="menu-item-add-form" action="/cart" method="post">
                                     @csrf

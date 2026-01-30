@@ -1,9 +1,9 @@
 @php
     function formatRupiah($number) {
         if (floor($number === $number)) {
-            return 'Rp ' . number_format($number, 0, ',', '.') . ',-';
+            return 'Rp' . number_format($number, 0, ',', '.') . ',-';
         } else {
-            return 'Rp ' . number_format($number, 2, ',', '.');
+            return 'Rp' . number_format($number, 2, ',', '.');
         }
     }
 @endphp
