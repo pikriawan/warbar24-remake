@@ -1,3 +1,106 @@
+.menu-edit-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-edit-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: white;
+    padding: 2rem;
+}
+
+.menu-edit-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.menu-forms {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem 2rem;
+}
+
+.menu-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.text-field {
+    width: 100%;
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0 0 0.0625rem #8F99A1 inset;
+    padding: 0.75rem 1rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.text-field:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.0625rem #00B700 inset;
+}
+
+.text-field::placeholder {
+    color: #8F99A1;
+}
+
 .preview {
+    border-radius: 2rem;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
+}
+
+.image-input {
+    display: none;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.radio-item {
+    display: flex;
+    gap: 1rem;
+}
+
+.radio-input {
+    accent-color: #00B700;
+}
+
+.menu-delete-form {
+    display: none;
+}
+
+.errors {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.error-text {
+    color: #FF0900;
+}
+
+@media (min-width: 768px) {
+    .menu-edit-title {
+        font-size: 2.5rem;
+    }
+
+    .menu-forms {
+        max-width: 33.75rem;
+    }
 }

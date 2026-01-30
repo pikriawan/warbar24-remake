@@ -72,7 +72,7 @@
                     @foreach ($errors->all() as $error)
                         <p class="error-text">{{ $error }}</p>
                     @endforeach
-                </ul>
+                </div>
             @endif
         </form>
     </div>
