@@ -22,8 +22,13 @@ class OrderController extends Controller
             abort(404);
         }
 
+        $totalPrice = $order->menus->reduce(function (?float $carry, $menu) {
+            return $carry + $menu->price * $menu->pivot->menu_quantity;
+        });
+
         return view('admin.order', [
             'order' => $order,
+            'totalPrice' => $totalPrice,
         ]);
     }
 

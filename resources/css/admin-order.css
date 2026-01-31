@@ -1,7 +1,138 @@
-.table-header {
-    border: 0.0625rem solid #3D3D3D;
+.order-container {
+    display: flex;
+    flex-direction: column;
 }
 
-.table-data {
-    border: 0.0625rem solid #3D3D3D;
+.order-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: white;
+    padding: 2rem;
+}
+
+.back-link {
+    color: black;
+}
+
+.order-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.order-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem 2rem;
+}
+
+.order-detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.order-detail-text:last-child {
+    text-align: end;
+}
+
+.order-detail-text-primary {
+    color: #00B700;
+}
+
+.order-detail-text-warning {
+    color: #FF7433;
+}
+
+.order-detail-text-danger {
+    color: #FF0900;
+}
+
+.order-menus-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0 2rem 2rem;
+}
+
+.order-menus-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem 2rem;
+}
+
+.order-menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.order-menu-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.order-menu-item-title {
+    font-weight: 600;
+}
+
+.order-menu-item-text:last-child {
+    text-align: end;
+}
+
+.order-menus-total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.order-menus-total-price-text {
+    font-weight: 600;
+}
+
+.order-menus-total-price-text:last-child {
+    text-align: end;
+}
+
+.order-actions-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0 2rem 2rem;
+}
+
+.order-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0 2rem 2rem;
+}
+
+@media (min-width: 768px) {
+    .order-title {
+        font-size: 2.5rem;
+    }
+
+    .order-menus-title {
+        font-size: 2rem;
+    }
+
+    .order-detail {
+        max-width: 33.75rem;
+    }
+
+    .order-menus-list {
+        max-width: 33.75rem;
+    }
+
+    .order-actions-title {
+        font-size: 2rem;
+    }
 }
