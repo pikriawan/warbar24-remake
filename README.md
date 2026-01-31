@@ -18,14 +18,6 @@ Run composer setup
 cd warteg-bahari-24
 composer run setup
 ```
-Run database migration
-```bash
-php artisan migrate
-```
-Run database seeder
-```bash
-php artisan db:seed
-```
 Run the website
 ```bash
 composer run dev
