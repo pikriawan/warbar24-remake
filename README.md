@@ -22,6 +22,11 @@ Link the storage
 ```bash
 php artisan storage:link
 ```
+Migrate and seed database
+```bash
+php artisan migrate
+php artisan migrate:fresh --seed
+```
 Run the website
 ```bash
 composer run dev
