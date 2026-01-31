@@ -11,6 +11,10 @@
     padding: 2rem;
 }
 
+.back-link {
+    color: black;
+}
+
 .menu-create-title {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
