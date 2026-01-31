@@ -18,6 +18,10 @@ Run composer setup
 cd warteg-bahari-24
 composer run setup
 ```
+Link the storage
+```bash
+php artisan storage:link
+```
 Run the website
 ```bash
 composer run dev
