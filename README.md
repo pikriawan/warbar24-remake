@@ -4,6 +4,7 @@ Online menu ordering website made with Laravel 12
 - Admin dashboard
 - Menu management
 - Order management
+- Menu searching and filtering
 - Cart system
 - Checkout system
 - Order history
