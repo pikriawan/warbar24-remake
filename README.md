@@ -39,4 +39,5 @@ Run the website
 composer run dev
 ```
 Open http://localhost:8000 on your web browser
+> [!Note]
 > To access admin page, open http://localhost:8000/admin/login. The default username is `admin`. The default password is `admin123`.
