@@ -12,7 +12,7 @@ class OrderController extends Controller
     public function index()
     {
         return view('admin.orders', [
-            'orders' => Order::whereNotNull('status')->get(),
+            'orders' => Order::whereNotNull('status')->latest()->get(),
         ]);
     }
 
