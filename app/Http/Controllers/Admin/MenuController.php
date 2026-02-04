@@ -12,7 +12,7 @@ class MenuController extends Controller
     public function index()
     {
         return view('admin.menus', [
-            'menus' => Menu::all(),
+            'menus' => Menu::orderBy('category')->latest()->get(),
         ]);
     }
 
