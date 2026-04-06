@@ -54,6 +54,9 @@ class OrderController extends Controller
 
         $order->status = $status;
 
+        $admin = Auth::guard('admin')->user();
+        $order->associate($admin);
+
         $order->save();
 
         return back();
