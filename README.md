@@ -16,6 +16,8 @@ Online menu ordering website made with Laravel 12
 ![Menus Page](https://raw.githubusercontent.com/pikriawan/warbar24-remake/refs/heads/main/public/images/menus-page-screenshot.png)
 ### Cart Page
 ![Cart Page](https://raw.githubusercontent.com/pikriawan/warbar24-remake/refs/heads/main/public/images/cart-page-screenshot.png)
+## Installation Requirements
+Have PHP, Node.js, and Composer installed
 ## Installation
 Clone this repository
 ```bash
