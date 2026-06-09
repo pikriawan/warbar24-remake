@@ -1,5 +1,7 @@
 # Warteg Bahari 24
 Online menu ordering website made with Laravel 12
+<br>
+Demo: [https://warteg-bahari-24.vercel.app](https://warteg-bahari-24.vercel.app)
 ## Features
 - Admin dashboard
 - Menu management
